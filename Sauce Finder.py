@@ -1,13 +1,13 @@
 import random, os, requests
 from bs4 import BeautifulSoup
 
-def Generate_Code():
+def Generate_Code(): #function generates a random 6 digit number
     code = ''
     for i in range(6):
         code += str(random.randint(0,9))
     return code
 
-def valid_url():
+def valid_url(): #function checks whether a doujin exists with the generates code
     valid = False
 
     while valid == False:
@@ -19,7 +19,7 @@ def valid_url():
 
 generate = True
 
-while generate == True:
+while generate == True: #get the tags from the page and ask user if they want to read a doujin with these tags
     data = requests.get(valid_url())
     soup = BeautifulSoup(data.text, 'html.parser')
 
@@ -41,7 +41,7 @@ while generate == True:
         os.system('cls')
         generate = True
 
-print('\nchoose A, B or C depending on which browser you want to open in')
+print('\nchoose A, B or C depending on which browser you want to open in') #if they say yes open the url in the browser of their choice in private browsing mode
 print('(A) Microsoft Edge\n(B) Google Chrome\n(C) FireFox')
 browser = input().lower()
 if browser not in ['a','b','c']:
