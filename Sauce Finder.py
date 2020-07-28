@@ -31,7 +31,7 @@ while generate == True: #get the tags from the page and ask user if they want to
         print(i+', ', end = '')
     print('\n\nType [y] if you want to read or [n] to generate another one (y/n)')
     response = input().lower()
-    if response in ['y','n'] and response == 'y':
+    if response in ['y','n'] and response == 'y': #if they say yes then exit the loop and if they say no then generate another code the repeat the process
         generate = False
     elif response not in ['y','n']:
         while response not in ['y','n']:
@@ -41,7 +41,7 @@ while generate == True: #get the tags from the page and ask user if they want to
         os.system('cls')
         generate = True
 
-print('\nchoose A, B or C depending on which browser you want to open in') #if they say yes open the url in the browser of their choice in private browsing mode
+print('\nchoose A, B or C depending on which browser you want to open in') #open the url in the browser of their choice in private browsing mode
 print('(A) Microsoft Edge\n(B) Google Chrome\n(C) FireFox')
 browser = input().lower()
 if browser not in ['a','b','c']:
