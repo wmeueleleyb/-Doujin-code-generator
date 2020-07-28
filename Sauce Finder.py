@@ -7,7 +7,7 @@ def Generate_Code(): #function generates a random 6 digit number
         code += str(random.randint(0,9))
     return code
 
-def valid_url(): #function checks whether a doujin exists with the generates code
+def valid_url(): #function checks whether a doujin exists with the generated code
     valid = False
 
     while valid == False:
